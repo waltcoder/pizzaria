@@ -331,6 +331,7 @@ a {
 
 .hero > h2 {
 	font-size: 2rem;
+	margin: 1rem 0rem;
 }
 
 #main {
@@ -383,7 +384,7 @@ a {
 }
 
 .pizzaOfTheDay {
-	height: 70vh;
+	height: 80vh;
 	width: 100%;
 	background-image: url(../img/bg.jpg);
 	background-size: cover;
@@ -427,4 +428,25 @@ a {
 	gap: 1rem;
 	display: flex;
 	align-items: center;
+}
+
+#backToTop {
+	position: fixed;
+	right: 1rem;
+	bottom: 1.5rem;
+	/* border-radius: 50%; */
+	/* clip-path: circle(50% at 50% 50%); */
+	background-color: #01e675;
+	padding: 0.5rem;
+
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	padding: 0.5rem;
+	clip-path: circle();
+	font-size: 1.5rem;
+	line-height: 0;
+
+	/* width: 2rem;
+	height: 2rem; */
 }
