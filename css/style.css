@@ -16,6 +16,8 @@ html {
 	font-family: 'Rubik', sans-serif;
 	font-size: 1em;
 	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /*
@@ -290,8 +292,7 @@ a {
 }
 
 #header .nav {
-	height: 15vh;
-
+	min-height: 13vh;
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 	background: hsla(240, 3%, 13%, 0.829);
@@ -340,7 +341,7 @@ a {
 
 .items:hover {
 	filter: brightness(0.7);
-	/* transform: scale(2rem); */
+	/* transform: scale(0.7); */
 }
 
 .btnLinks {
@@ -497,4 +498,10 @@ a {
 
 	/* width: 2rem;
 	height: 2rem; */
+}
+
+@media (max-width: 1220px) {
+	html {
+		font-size: 95%;
+	}
 }
