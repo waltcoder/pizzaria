@@ -1,0 +1,430 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+	color: #222;
+	font-family: 'Rubik', sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+	vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+	display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	/* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	white-space: inherit;
+	width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+}
+
+.clearfix::after {
+	clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+	/* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 1.25dppx),
+	(min-resolution: 120dpi) {
+	/* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+	*,
+	*::before,
+	*::after {
+		background: #fff !important;
+		color: #000 !important;
+		/* Black prints faster */
+		box-shadow: none !important;
+		text-shadow: none !important;
+
+		box-sizing: border-box;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]::after {
+		content: ' (' attr(href) ')';
+	}
+
+	abbr[title]::after {
+		content: ' (' attr(title) ')';
+	}
+
+	/*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+	a[href^='#']::after,
+	a[href^='javascript:']::after {
+		content: '';
+	}
+
+	pre {
+		white-space: pre-wrap !important;
+	}
+
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}
+
+*,
+*::after,
+*::before {
+	/* margin: 0; */
+	padding: 0;
+	box-sizing: border-box !important;
+}
+
+body {
+	color: white;
+}
+
+#header {
+	background-image: url(../img/bgHeader.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	min-height: 100vh;
+}
+
+.container {
+	width: 80%;
+	max-width: 1440px;
+	margin: auto;
+}
+
+h2 {
+	margin: 0;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav {
+	height: 15vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	font-size: 3rem;
+	font-weight: 700;
+	color: white;
+}
+
+.btnLinks {
+	font-size: 1rem;
+	font-weight: 600;
+	color: white;
+	background: #e31837;
+	padding: 1rem 4rem;
+	transition: 700ms ease-out;
+}
+
+.btnLinks:hover {
+	background: #ffc500;
+}
+
+.hero {
+	max-width: 500px;
+}
+
+.hero > h1,
+.hero > h2 {
+	text-transform: uppercase;
+	color: white;
+}
+
+.hero > h1 {
+	font-size: 4rem;
+	border-bottom: 4px solid #ffc500;
+	border-right: 4px solid #ffc500;
+}
+
+.hero > h2 {
+	font-size: 2rem;
+}
+
+#main {
+	background: #0d0909;
+}
+
+.features {
+	padding: 5rem 0;
+}
+
+.features > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5rem;
+}
+
+.features > div > div {
+	width: 300px;
+	text-align: center;
+}
+
+.features img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	border-bottom: 4px solid #ffc500;
+	border-right: 4px solid #ffc500;
+}
+
+.features > h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+.features h4 {
+	margin: 0.7rem;
+}
+
+.features .description {
+}
+
+.features .price {
+	font-size: 1.5rem;
+	font-weight: 600;
+	display: block;
+	margin: 2rem 0;
+}
+
+.pizzaOfTheDay {
+	height: 70vh;
+	width: 100%;
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.pizzaOfTheDay > h2 {
+	font-size: 4rem;
+}
+
+.pizzaOfTheDay > p {
+	font-size: 2rem;
+}
+
+.pizzaOfTheDay > .btnLinks {
+	background: #ffc500;
+}
+
+#footer .nav {
+	height: 10vh;
+	justify-content: space-between;
+}
+
+#footer {
+	background: black;
+}
+
+.fab,
+.fas {
+	font-size: 1.5rem;
+	color: white;
+}
+
+.menu {
+	list-style: none;
+	gap: 1rem;
+	display: flex;
+	align-items: center;
+}
