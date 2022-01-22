@@ -266,6 +266,8 @@ body {
 	background-repeat: no-repeat;
 
 	min-height: 100vh;
+
+	padding-top: 7rem;
 }
 
 .container {
@@ -287,17 +289,58 @@ a {
 	text-decoration: none;
 }
 
-.nav {
+#header .nav {
 	height: 15vh;
+
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	background: hsla(240, 3%, 13%, 0.829);
+
+	width: 100%;
+
 	display: flex;
 	align-items: center;
-	justify-content: center;
+
+	position: fixed;
+	top: 0;
+}
+
+#header .nav > div {
+	width: 80%;
+	max-width: 1400px;
+	margin: auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .logo {
 	font-size: 3rem;
 	font-weight: 700;
 	color: white;
+}
+
+.menu {
+	list-style: none;
+}
+
+#header .menu {
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.items {
+	color: white;
+	transition: 700ms ease-in-out;
+}
+
+.items:hover {
+	filter: brightness(0.7);
+	/* transform: scale(2rem); */
 }
 
 .btnLinks {
@@ -331,7 +374,7 @@ a {
 
 .hero > h2 {
 	font-size: 2rem;
-	margin: 1rem 0rem;
+	margin: 0 0 1rem 0rem;
 }
 
 #main {
@@ -409,7 +452,7 @@ a {
 }
 
 #footer .nav {
-	height: 10vh;
+	height: 70vh;
 	justify-content: space-between;
 }
 
@@ -423,11 +466,16 @@ a {
 	color: white;
 }
 
-.menu {
+#footer .menu {
 	list-style: none;
 	gap: 1rem;
 	display: flex;
 	align-items: center;
+}
+
+#footer .menu {
+	flex-direction: column;
+	align-items: baseline;
 }
 
 #backToTop {
