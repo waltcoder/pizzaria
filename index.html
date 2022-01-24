@@ -41,7 +41,7 @@
 			<nav class="nav">
 				<div>
 					<button class="logo">Pizza</button>
-					<ul class="menu">
+					<ul class="menu" onclick="Modal.close()">
 						<li>
 							<a href="https://" target="_blank" rel="noopener noreferrer" class="items">Homes</a>
 						</li>
@@ -65,9 +65,9 @@
 						</li>
 					</ul>
 					<div class="menuMobile" onclick="Modal.open()">
-						<div class="bar"></div>
-						<div class="bar"></div>
-						<div class="bar"></div>
+						<div class="bar one"></div>
+						<div class="bar two"></div>
+						<div class="bar three"></div>
 					</div>
 				</div>
 			</nav>
@@ -256,13 +256,15 @@
 				open() {
 					// Abrir modal
 					// Adicionar a class active ao modal
-					document.querySelector('.menu').classList.add('active');
+					document.querySelector('.menu').classList.add('on');
+					document.querySelector('.menuMobile').classList.add('on');
 					// alert('nnlfnn');
 				},
 				close() {
 					// fechar o modal
 					// remover a class active do modal
-					document.querySelector('.body').classList.remove('active');
+					document.querySelector('.menu').classList.remove('on');
+					document.querySelector('.menuMobile').classList.remove('on');
 				},
 			};
 		</script>
