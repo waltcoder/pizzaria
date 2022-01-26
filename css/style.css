@@ -1,31 +1,12 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
 html {
 	color: #222;
-	font-family: 'Rubik', sans-serif;
+	/* font-family: 'Rubik', sans-serif; */
+	font-family: 'Kanit', sans-serif;
 	font-size: 1em;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
 	background: #b3d4fc;
@@ -37,10 +18,6 @@ html {
 	text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
 hr {
 	display: block;
 	height: 1px;
@@ -49,12 +26,6 @@ hr {
 	margin: 1em 0;
 	padding: 0;
 }
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
 
 audio,
 canvas,
@@ -65,49 +36,20 @@ video {
 	vertical-align: middle;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
 fieldset {
 	border: 0;
 	margin: 0;
 	padding: 0;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
 textarea {
 	resize: vertical;
 }
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
 
 .hidden,
 [hidden] {
 	display: none !important;
 }
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
 
 .visually-hidden {
 	border: 0;
@@ -119,14 +61,7 @@ textarea {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
-	/* 1 */
 }
-
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
@@ -139,20 +74,9 @@ textarea {
 	width: auto;
 }
 
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
 .invisible {
 	visibility: hidden;
 }
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
 
 .clearfix::before,
 .clearfix::after {
@@ -164,28 +88,11 @@ textarea {
 	clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
 @media only screen and (min-width: 35em) {
-	/* Style adjustments for viewports that meet the condition */
 }
 
-@media print,
-	(-webkit-min-device-pixel-ratio: 1.25),
-	(min-resolution: 1.25dppx),
-	(min-resolution: 120dpi) {
-	/* Style adjustments for high resolution devices */
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
 }
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
 
 @media print {
 	*,
@@ -213,10 +120,6 @@ textarea {
 		content: ' (' attr(title) ')';
 	}
 
-	/*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
 	a[href^='#']::after,
 	a[href^='javascript:']::after {
 		content: '';
@@ -253,9 +156,21 @@ textarea {
 *,
 *::after,
 *::before {
-	/* margin: 0; */
+	margin: 0;
 	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
 	box-sizing: border-box !important;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:focus {
+	outline: 0;
 }
 
 body {
@@ -263,7 +178,8 @@ body {
 }
 
 #header {
-	background-image: url(../img/bgHeader.jpg);
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(../img/bgHeader.jpg);
+	/* background-image: url(../img/bgHeader.jpg); */
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -278,10 +194,6 @@ body {
 	margin: auto;
 }
 
-h2 {
-	margin: 0;
-}
-
 button {
 	background: none;
 	border: none;
@@ -292,7 +204,7 @@ a {
 }
 
 #header .nav {
-	min-height: 13vh;
+	height: 80px;
 	-webkit-backdrop-filter: blur(20px);
 	backdrop-filter: blur(20px);
 	background: hsla(240, 3%, 13%, 0.829);
@@ -304,6 +216,8 @@ a {
 
 	position: fixed;
 	top: 0;
+
+	font-weight: 700;
 }
 
 #header .nav > div {
@@ -331,7 +245,6 @@ a {
 	align-items: center;
 	gap: 3rem;
 	font-size: 1.2rem;
-	font-weight: 600;
 }
 
 .items {
@@ -345,16 +258,20 @@ a {
 }
 
 .btnLinks {
-	font-size: 1rem;
+	font-size: 1.4rem;
 	font-weight: 600;
-	color: white;
-	background: #e31837;
 	padding: 1rem 4rem;
+	border: none;
+	background: #e31837;
+	color: #fff;
 	transition: 700ms ease-out;
+	cursor: pointer;
 }
 
 .btnLinks:hover {
 	background: #ffc500;
+	color: #000;
+	transition: 0.2s ease-out;
 }
 
 .hero {
@@ -368,22 +285,27 @@ a {
 }
 
 .hero > h1 {
-	font-size: 4rem;
-	border-bottom: 4px solid #ffc500;
-	border-right: 4px solid #ffc500;
+	font-size: clamp(2.5rem, 10vw, 5rem);
+	margin-bottom: 1rem;
+	box-shadow: 3px 5px #e9ba23;
+	letter-spacing: 3px;
 }
 
 .hero > h2 {
-	font-size: 2rem;
+	font-size: clamp(2rem, 2.5vw, 3rem);
+	margin-bottom: 2rem;
 	margin: 0 0 1rem 0rem;
 }
 
 #main {
-	background: #0d0909;
+	/* background: #0d0909; */
+	background: #150f0f;
 }
 
 .features {
-	padding: 5rem 0;
+	min-height: 100vh;
+	padding: 5rem calc((100vw - 1300px) / 2);
+	color: #fff;
 }
 
 .features > div {
@@ -395,6 +317,8 @@ a {
 }
 
 .features > div > div {
+	margin: 0 2rem;
+	line-height: 2;
 	width: 300px;
 	text-align: center;
 }
@@ -403,28 +327,45 @@ a {
 	width: 300px;
 	height: 300px;
 	object-fit: cover;
-	border-bottom: 4px solid #ffc500;
-	border-right: 4px solid #ffc500;
+	box-shadow: 8px 8px #fdc500;
 }
 
 .features > h2 {
+	font-size: clamp(2rem, 2.5vw, 3rem);
 	text-align: center;
-	font-size: 2rem;
-	margin-bottom: 2rem;
+	margin-bottom: 5rem;
 }
 
 .features h4 {
-	margin: 0.7rem;
+	font-weight: 400;
+	font-size: 1.5rem;
 }
 
 .features .description {
+	margin-bottom: 1rem;
 }
 
 .features .price {
-	font-size: 1.5rem;
-	font-weight: 600;
+	margin-bottom: 1rem;
+	font-size: 2rem;
+
 	display: block;
-	margin: 2rem 0;
+}
+
+.features button {
+	font-size: 1rem;
+	padding: 1rem 4rem;
+	border: none;
+	background: #e31837;
+	color: #fff;
+	transition: 0.2 ease-out;
+}
+
+.features button {
+	background: #ffc500;
+	transition: 0.2s ease-out;
+	cursor: pointer;
+	color: #000;
 }
 
 .pizzaOfTheDay {
@@ -438,18 +379,35 @@ a {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	padding: 0 1rem;
+
+	height: 100vh;
+	max-height: 500px;
 }
 
 .pizzaOfTheDay > h2 {
-	font-size: 4rem;
+	font-size: clamp(3rem, 5vw, 5rem);
 }
 
 .pizzaOfTheDay > p {
-	font-size: 2rem;
+	margin-bottom: 1rem;
+	font-size: clamp(1rem, 3vw, 2rem);
 }
 
 .pizzaOfTheDay > .btnLinks {
 	background: #ffc500;
+	font-size: 1.4rem;
+	padding: 0.6rem 3rem;
+	border: none;
+	color: #000;
+	transition: 0.2s ease-out;
+}
+
+.pizzaOfTheDay > .btnLinks:hover {
+	color: #fff;
+	background-color: #e31837;
+	transition: 0.2s ease-out;
+	cursor: pointer;
 }
 
 #footer .nav {
@@ -458,7 +416,7 @@ a {
 }
 
 #footer {
-	background: black;
+	background-color: #0d0909;
 }
 
 .fab,
