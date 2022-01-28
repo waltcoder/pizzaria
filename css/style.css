@@ -274,6 +274,28 @@ a {
 	transition: 0.2s ease-out;
 }
 
+/* .banner {
+	width: 100%;
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	background: hsla(240, 3%, 13%, 0.829);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+
+	padding: 1rem;
+}
+
+.banner .btn {
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: #e31837;
+	padding: 0.5rem 2rem;
+	border-radius: 10px;
+} */
+
 .hero {
 	max-width: 500px;
 }
@@ -371,6 +393,7 @@ a {
 .pizzaOfTheDay {
 	height: 80vh;
 	width: 100%;
+	background: linear-gradient(to right, rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.767)), url(../img/bg.jpg);
 	background-image: url(../img/bg.jpg);
 	background-size: cover;
 	background-position: center center;
@@ -410,22 +433,22 @@ a {
 	cursor: pointer;
 }
 
-#footer .nav {
+/* #footer .nav {
 	height: 70vh;
 	justify-content: space-between;
 }
 
 #footer {
 	background-color: #0d0909;
-}
+} */
 
 .fab,
 .fas {
-	font-size: 1.5rem;
+	font-size: 2rem;
 	color: white;
 }
 
-#footer .menu {
+/* #footer .menu {
 	list-style: none;
 	gap: 1rem;
 	display: flex;
@@ -435,7 +458,7 @@ a {
 #footer .menu {
 	flex-direction: column;
 	align-items: baseline;
-}
+} */
 
 #backToTop {
 	position: fixed;
@@ -444,7 +467,7 @@ a {
 	/* border-radius: 50%; */
 	/* clip-path: circle(50% at 50% 50%); */
 	background-color: #01e675;
-	padding: 0.5rem;
+	padding: 1rem;
 
 	position: fixed;
 	right: 1rem;
@@ -460,6 +483,31 @@ a {
 
 .menuMobile {
 	display: none;
+}
+
+#footer {
+	background-color: #0d0909;
+}
+
+#footer .logo {
+	font-size: 2rem;
+}
+
+#footer nav {
+	padding: 16px 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#footer nav .menu {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+#footer a {
+	color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -518,5 +566,12 @@ a {
 		width: 100%;
 		margin: 6px auto;
 		transition-duration: 0.3s;
+
+		-webkit-border-radius: 9px;
+		-khtml-border-radius: 9px;
+		-moz-border-radius: 9px;
+		-ms-border-radius: 9px;
+		-o-border-radius: 9px;
+		border-radius: 9px;
 	}
 }
